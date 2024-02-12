@@ -2,7 +2,7 @@ from bottle import route, run, request, response
 import random
 from datetime import datetime
 
-#test
+#test for google
 
 break_text = '<br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>' #reuse in multiple places
 
