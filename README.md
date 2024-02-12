@@ -1,15 +1,13 @@
 # Dice Generator REST API
 
-Short Description
-
-Using the /dice/command URL, you can request any number of any sided dice 
+Using the /dice/command command, you can request any number of any sided dice 
 To be randomly generated for you. An example would be if you wanted to 
 roll five 6 sided dice and three 20 sided dice. Just enter
 "/dice/5d6:3d20" and your dice will be generated and shown to you.
 
 ## Getting Started
 
-These instructions will guide you through how use this REST API and utlize
+These instructions will guide you through how use this REST API and utilize
 its various dice generating tools
 
 ### Simple Example
@@ -25,7 +23,7 @@ and must always be followed by the (number)d(sides) dice command.
 
 You can request an infinite amount of dice by stringing these along to help you create
 DnD characters, play dice games, and more. Read the next section to find out how to 
-use some of our help tools.
+use some of our helpful tools.
 
 
 ## Using More Advanced Tools
@@ -75,7 +73,15 @@ as the dice will be summed anyways.
 
 ### Dice Command Repeats
 
-If we would want to roll the same dice command multiple times, we can simply
+By adding "?repeat=someNumber" to the end of any dice command, we can roll the entire dice command 
+multiple times. This is useful when you have to roll the same set of dice requests multiple times.
+Rather than re-entering the requests, we can just use our repeat feature. A useful example
+where one might use this feature is if they wanted to roll attacks in DnD for multiple attack turns.
+Lets say we had to roll two 8 sided dice for one weapon and one 3 sided die for an additional modifier,
+but we have two attack opportunites per turn, then we could just use the command "dice/2d8:1d3?repeat=2".
+
+The repeat command also works with the total sum command, '+' sum character, and "max" keyphrase, meaning
+that we can repeat any complicated dice commands that we can think of.
 
 
 ## Why Use Our REST API Over A Competitor's Version?
@@ -84,44 +90,12 @@ Add additional notes to deploy this on a live system
 
 ### More Features Than Competitors
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
+Most competitors only show you the individually rolled dice and a total sum. They do not allow us to find 
+sums for individual collections of dice, nor do they allow us to return the maximum of a given dice request.
+Additionally, most competitors do not allow users to repeat a dice multiple times at once.
 
 ### No Account Needed!
 
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
-## More Features Than Competitors
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-## Authors
-
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
-
-## License
-
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
-
-## Acknowledgments
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
+The more advanced dice generating competitors often require an account of some sort to use their service. 
+With our deice generator application, there is no need for us to store or use your personal information.
+Simply type the command in and watch the magic happen!
